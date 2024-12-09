@@ -25,3 +25,6 @@ Model 2 ipynb dosyası veri analizi ve mühendisliğinin tekrar yapıldığı ar
 - Model: **Random Forest**
 - Amaç: Kullanıcı tarafından belirtilen yıldız derecelerini (1–5 yıldız) sentence transformer ile embedding yaparak random forest makine öğrenmesi sağlanmıştır.
 - Sonuç: %75 oranında test sonucu çıkmıştır.
+
+  
+# Model ve veri setleri boyutlarından ötürü eklenememiştir.
