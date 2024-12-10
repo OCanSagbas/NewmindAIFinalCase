@@ -9,24 +9,24 @@ Projede iki farklı ipynb ve 1 app.py dosyası vardır. App.py dosyası streamli
 ![image](https://github.com/user-attachments/assets/1195edfa-ae22-43aa-9863-a0444c86092b)
 
 
-- newmind-model-1-and-feature-engineering.ipynb dosyası veri analizi, veri mühendisliği, veri görselleştirme ve metin özetleme modelini içermektedir.
-- newmind-model-2.ipynb dosyası veri analizi ve mühendisliğini Model-1.ipynb dosyası gibi tekrardan yapar ardından da bağlamsal embedding ile sınıflandırma ve metin üretme modelini oluşturur.
+- 📝 newmind-model-1-and-feature-engineering.ipynb dosyası veri analizi, veri mühendisliği, veri görselleştirme ve metin özetleme modelini içermektedir.
+- 📝 newmind-model-2.ipynb dosyası veri analizi ve mühendisliğini Model-1.ipynb dosyası gibi tekrardan yapar ardından da bağlamsal embedding ile sınıflandırma ve metin üretme modelini oluşturur.
 
 ---
 
 ## **Proje Özeti**
 ### 1. **Metin Özetleme**
-- Model: **T5-large**
+- 🤗 Model: **T5-large**
 - Amaç: Uzun restoran yorumlarını özetleyerek anahtar bilgileri çıkarmak.
 - Yaklaşım: Özetleme için önceden eğitilmiş **T5-large** modeli, yorum verileriyle ince ayar yapılarak (fine-tuning) eğitildi.
 
 ### 2. **Metin Üretimi**
-- Model: **DistilGPT-2**
+- 🤗 Model: **DistilGPT-2**
 - Amaç: Kullanıcı tarafından belirtilen yıldız derecelerine (1–5 yıldız) dayalı yorumlar oluşturmak.
 - Yaklaşım: **DistilGPT-2**, şu formatta yapılandırılmış bir veri kümesiyle ince ayar yapılarak eğitildi.
 
 ### 3. **Sınıflandırma**
-- Model: **Random Forest**
+- 🤗 Model: **Random Forest**
 - Amaç: Kullanıcı tarafından belirtilen yıldız derecelerini (1–5 yıldız) sentence transformer ile embedding yaparak random forest makine öğrenmesi sağlanmıştır.
 - Sonuç: %75 oranında test sonucu çıkmıştır.
 
