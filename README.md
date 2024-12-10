@@ -9,8 +9,8 @@ Projede iki farklı ipynb ve 1 app.py dosyası vardır. App.py dosyası streamli
 ![image](https://github.com/user-attachments/assets/1195edfa-ae22-43aa-9863-a0444c86092b)
 
 
-newmind-model-1-and-feature-engineering.ipynb dosyası veri analizi, veri mühendisliği, veri görselleştirme ve metin özetleme modelini içermektedir.
-newmind-model-2.ipynb dosyası veri analizi ve mühendisliğini Model-1.ipynb dosyası gibi tekrardan yapar ardından da bağlamsal embedding ile sınıflandırma ve metin üretme modelini oluşturur.
+- newmind-model-1-and-feature-engineering.ipynb dosyası veri analizi, veri mühendisliği, veri görselleştirme ve metin özetleme modelini içermektedir.
+- newmind-model-2.ipynb dosyası veri analizi ve mühendisliğini Model-1.ipynb dosyası gibi tekrardan yapar ardından da bağlamsal embedding ile sınıflandırma ve metin üretme modelini oluşturur.
 
 ---
 
