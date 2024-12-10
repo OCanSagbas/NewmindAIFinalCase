@@ -3,7 +3,9 @@ Newmind AI Company Bootcamp Final Case study will be here.
 
 # Yelp Yorum Analizi ve Metin Üretimi
 
-Projede iki farklı ipynb ve 1 app.py dosyası vardır. App.py dosyası streamlit arayüzünü sağlayan metin özetleme ve metin üretimi yapan 2 farklı modeli çalıştırır. Metin Özeti 5 farklı restoranın yorumları sonucu ortaya çıkan özetlerdir. Metin Üretimi ise kullanıcının yazdığı 1'den 5'e kadar yıldızlardan yorum üretmesini ister ve model otomatik üretir. 
+Projede iki farklı ipynb ve 1 app.py dosyası vardır. App.py dosyası streamlit arayüzünü sağlayan metin özetleme ve metin üretimi yapan 2 farklı modeli çalıştırır. Metin Özetleme LLM Modeli 5 farklı restoranın yorumları sonucu ortaya çıkan restorant hakkındaki özetlerdir. Metin Üretme LLM Modeli ise restorantlara yazılan yorumlara karşılık gelen 1'den 5'e kadar olan yıldızlar(yorumların puanlamasını) ile eğitilmiştir. Streamlit Prompt satırına kullanıcı 1 yıldızlı yorumdan 5 yıldızlı yoruma kadar tüm yıldızları içeren yorum üretmesini isteyebilir ve model bu istek üzerine istenilen yıldız sayısına göre yorum üretir.
+
+![image](https://github.com/user-attachments/assets/1195edfa-ae22-43aa-9863-a0444c86092b)
 
 Model 1 ipynb dosyası veri analizi, veri mühendisliği, veri görselleştirme ve metin özetleme modelini içermektedir.
 Model 2 ipynb dosyası veri analizi ve mühendisliğinin tekrar yapıldığı ardından da bağlamsal embedding ile sınıflandırma ve metin üretme modelini içermektedir.
