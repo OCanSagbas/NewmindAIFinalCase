@@ -5,8 +5,9 @@ Newmind AI Company Bootcamp Final Case study will be here.
 
 Projede iki farklı ipynb ve 1 app.py dosyası vardır. App.py dosyası streamlit arayüzünü sağlayan metin özetleme ve metin üretimi yapan 2 farklı modeli çalıştırır. Metin Özetleme LLM Modeli 5 farklı restoranın yorumları sonucu ortaya çıkan restorant hakkındaki özetlerdir. Metin Üretme LLM Modeli ise restorantlara yazılan yorumlara karşılık gelen 1'den 5'e kadar olan yıldızlar(yorumların puanlamasını) ile eğitilmiştir. Streamlit Prompt satırına kullanıcı 1 yıldızlı yorumdan 5 yıldızlı yoruma kadar tüm yıldızları içeren yorum üretmesini isteyebilir ve model bu istek üzerine istenilen yıldız sayısına göre yorum üretir.
 
+### Data Verisi Stars, Text, Business ID kolonları
 ![image](https://github.com/user-attachments/assets/1195edfa-ae22-43aa-9863-a0444c86092b)
-# Data Verisi Stars, Text, Business ID kolonları
+
 
 newmind-model-1-and-feature-engineering.ipynb dosyası veri analizi, veri mühendisliği, veri görselleştirme ve metin özetleme modelini içermektedir.
 newmind-model-2.ipynb dosyası veri analizi ve mühendisliğini Model-1.ipynb dosyası gibi tekrardan yapar ardından da bağlamsal embedding ile sınıflandırma ve metin üretme modelini oluşturur.
