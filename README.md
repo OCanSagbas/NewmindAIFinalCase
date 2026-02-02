@@ -1,35 +1,61 @@
-# NewmindAIFinalCase
-Newmind AI Company Bootcamp Final Case study will be here.
+# Yelp Review Intelligence Suite
+A compact NLP project that turns raw Yelp reviews into **actionable business summaries**, **rating-aware synthetic reviews**, and **star rating predictions** — packaged with an interactive **Streamlit** demo app.
 
-# Yelp Yorum Analizi ve Metin Üretimi
-
-Projede iki farklı ipynb ve 1 app.py dosyası vardır. App.py dosyası streamlit arayüzünü sağlayan metin özetleme ve metin üretimi yapan 2 farklı modeli çalıştırır. Metin Özetleme LLM Modeli 5 farklı restoranın yorumları sonucu ortaya çıkan restorant hakkındaki özetlerdir. Metin Üretme LLM Modeli ise restorantlara yazılan yorumlara karşılık gelen 1'den 5'e kadar olan yıldızlar(yorumların puanlamasını) ile eğitilmiştir. Streamlit Prompt satırına kullanıcı 1 yıldızlı yorumdan 5 yıldızlı yoruma kadar tüm yıldızları içeren yorum üretmesini isteyebilir ve model bu istek üzerine istenilen yıldız sayısına göre yorum üretir.
-
-### Data Verisi Stars, Text, Business ID kolonları
-![image](https://github.com/user-attachments/assets/1195edfa-ae22-43aa-9863-a0444c86092b)
-
-
-- 📝 newmind-model-1-and-feature-engineering.ipynb dosyası veri analizi, veri mühendisliği, veri görselleştirme ve metin özetleme modelini içermektedir.
-- 📝 newmind-model-2.ipynb dosyası veri analizi ve mühendisliğini Model-1.ipynb dosyası gibi tekrardan yapar ardından da bağlamsal embedding ile sınıflandırma ve metin üretme modelini oluşturur.
+> Note: Trained model artifacts and the full dataset are not included in this repository due to size limitations.
 
 ---
 
-## **Proje Özeti**
-### 1. **Metin Özetleme**
-- 🤗 Model: **T5-large**
-- Amaç: Uzun restoran yorumlarını özetleyerek anahtar bilgileri çıkarmak.
-- Yaklaşım: Özetleme için önceden eğitilmiş **T5-large** modeli, yorum verileriyle ince ayar yapılarak (fine-tuning) eğitildi.
+## ✨ What this project does
 
-### 2. **Metin Üretimi**
-- 🤗 Model: **DistilGPT-2**
-- Amaç: Kullanıcı tarafından belirtilen yıldız derecelerine (1–5 yıldız) dayalı yorumlar oluşturmak.
-- Yaklaşım: **DistilGPT-2**, şu formatta yapılandırılmış bir veri kümesiyle ince ayar yapılarak eğitildi.
+This repository covers three practical NLP tasks on Yelp restaurant reviews:
 
-### 3. **Sınıflandırma**
-- 🤗 Model: **Random Forest**
-- Amaç: Kullanıcı tarafından belirtilen yıldız derecelerini (1–5 yıldız) sentence transformer ile embedding yaparak random forest makine öğrenmesi sağlanmıştır.
-- Sonuç: %75 oranında test sonucu çıkmıştır.
+1. **Abstractive Summarization (LLM fine-tuning)**  
+   - Model: **T5-large**  
+   - Goal: Generate a concise “business-level” summary from multiple customer reviews (e.g., aggregating feedback into a short overview).
 
-  
-# Model ve veri setleri boyutlarından ötürü eklenememiştir.
-Veri Seti linki: https://www.kaggle.com/datasets/yelp-dataset/yelp-dataset
+2. **Rating-Conditioned Review Generation (LLM fine-tuning)**  
+   - Model: **DistilGPT-2**  
+   - Goal: Generate realistic restaurant review text conditioned on a requested star rating (1–5).
+
+3. **Star Rating Classification (Traditional ML)**  
+   - Approach: Sentence embeddings + **Random Forest** classifier  
+   - Reported result: ~**75%** test accuracy (as documented in the original work).
+
+---
+
+## 🧱 Repository structure
+
+- `app.py`  
+  Streamlit application that runs:
+  - Review summarization
+  - Rating-conditioned review generation
+
+- `newmind-model-1-and-feature-engineering.ipynb`  
+  Data analysis + feature engineering + summarization pipeline (T5 fine-tuning).
+
+- `newmind-model-2.ipynb`  
+  Data preparation + embeddings + rating classification + review generation pipeline.
+
+- `Restorant yorum.pdf`  
+  Project report/documentation.
+
+---
+
+## 📦 Dataset
+
+- Source: **Yelp Dataset** (via Kaggle)  
+- Expected columns used in the notebooks:  
+  `stars`, `text`, `business_id`
+
+Dataset link (as referenced in the original README):  
+https://www.kaggle.com/datasets/yelp-dataset/yelp-dataset
+
+---
+
+## 🚀 Quickstart (Demo App)
+
+> If you already have the required model checkpoints locally (not stored in this repo), you can run the Streamlit app.
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
