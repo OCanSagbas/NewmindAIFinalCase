@@ -1,4 +1,4 @@
-# Yelp Review Intelligence Suite
+# Yelp Review Summarization & Rating-Based Text Generation
 A compact NLP project that turns raw Yelp reviews into **actionable business summaries**, **rating-aware synthetic reviews**, and **star rating predictions** — packaged with an interactive **Streamlit** demo app.
 
 > Note: Trained model artifacts and the full dataset are not included in this repository due to size limitations.
@@ -30,10 +30,10 @@ This repository covers three practical NLP tasks on Yelp restaurant reviews:
   - Review summarization
   - Rating-conditioned review generation
 
-- `newmind-model-1-and-feature-engineering.ipynb`  
+- `model-1-and-feature-engineering.ipynb`  
   Data analysis + feature engineering + summarization pipeline (T5 fine-tuning).
 
-- `newmind-model-2.ipynb`  
+- `model-2.ipynb`  
   Data preparation + embeddings + rating classification + review generation pipeline.
 
 - `Restorant yorum.pdf`  
